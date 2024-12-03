@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 '''Making changes module'''
 
+
 def makeChange(coins, total):
     '''Calculates the fewest number of coins needed to meet a given total.
 
@@ -19,13 +20,13 @@ def makeChange(coins, total):
     for coin in coins:
         if coin > total:
             continue
-        
+
         count = total // coin
         total -= count * coin
         coin_count += count
 
         if total == 0:
-            break;
+            break
 
     if total > 0:
         return -1
